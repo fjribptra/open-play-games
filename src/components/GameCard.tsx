@@ -13,7 +13,7 @@ const GameCard = ({image, title, category, link}: GameCardProps) => {
               <h2 className="font-bold">{title}</h2>
               <h3 className="text-gray-500">{category}</h3>
               </div>
-              <Link href={link} className="bg-green-500 text-white p-3 rounded-md flex gap-3 items-center justify-center cursor-pointer" target="_blank">Play <FaPlay /></Link>
+              <Link href={link} className="bg-green-500 hover:bg-black transition-all text-white p-3 rounded-md flex gap-3 items-center justify-center cursor-pointer" target="_blank">Play <FaPlay /></Link>
             </div>
   )
 }
