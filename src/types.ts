@@ -12,3 +12,8 @@ export interface GameCardProps {
     category: string;
     link: string;
 }
+
+export interface GameFilterProps {
+  filterGame: string;
+  setFilterGame: (category: string) => void;
+}

@@ -1,9 +1,14 @@
+"use client"
+
 import Footer from "@/components/Footer";
 import GameCard from "@/components/GameCard";
+import GameFilter from "@/components/GameFilter";
 import Header from "@/components/Header";
 import { mockGames } from "@/data/mockData";
+import { useState } from "react";
 
 export default function Home() {
+  const [filterGame, setFilterGame] = useState<string>("All")
   return (
     <>
       <Header/>
@@ -18,26 +23,12 @@ export default function Home() {
           </div>
         <div className="container mx-auto p-4">
           {/* Category Navigation */}
-          <div className="flex gap-5 p-5 overflow-scroll">
-              <div className="px-5 py-2 border rounded-md bg-black text-white cursor-pointer">
-                All
-              </div>
-              <div className="px-5 py-2 border rounded-md cursor-pointer">
-                Action
-              </div>
-              <div className="px-5 py-2 border rounded-md cursor-pointer">
-                Arcade
-              </div>
-              <div className="px-5 py-2 border rounded-md cursor-pointer">
-                Puzzle
-              </div>
-              <div className="px-5 py-2 border rounded-md cursor-pointer">
-                Adventure
-              </div>
-          </div>
+          <GameFilter filterGame={filterGame} setFilterGame={setFilterGame}/>
           {/* Game List */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-          {mockGames.map(({id, image, title, category, link}) => (
+          {mockGames.filter((game) => {
+              return game.category === filterGame || filterGame === "All"
+          }).map(({id, image, title, category, link}) => (
               <GameCard image={image} title={title} category={category} link={link} key={id}/>
             ))}
           </div>
