@@ -19,6 +19,9 @@ const GameFilter = ({filterGame, setFilterGame}: GameFilterProps) => {
               <button className={`px-5 py-2 border rounded-md cursor-pointer transition-all hover:bg-black hover:text-white ${filterGame === "Adventure" ? 'bg-black text-white' : null}`} onClick={() => setFilterGame("Adventure")}>
                 Adventure
               </button>
+              <button className={`px-5 py-2 border rounded-md cursor-pointer transition-all hover:bg-black hover:text-white ${filterGame === "Education" ? 'bg-black text-white' : null}`} onClick={() => setFilterGame("Education")}>
+                Education
+              </button>
           </div>
   )
 }

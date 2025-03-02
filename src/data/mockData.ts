@@ -14,5 +14,26 @@ export const mockGames: Game[] = [
         category: "Action",
         image: "/game-thumbnails/space-shooter-jet.png",
         link: "https://space-shooter-jet.vercel.app/"
+    },
+    {
+        id: "3",
+        title: "Adventure Island Escape",
+        category: "Adventure",
+        image: "/game-thumbnails/adventure-island-escape.png",
+        link: "https://adventure-island-escape.vercel.app/"
+    },
+    {
+        id: "4",
+        title: "Memory Math",
+        category: "Education",
+        image: "/game-thumbnails/memory-math.png",
+        link: "https://memory-math.vercel.app/"
+    },
+    {
+        id: "5",
+        title: "Memory Match Puzzle",
+        category: "Puzzle",
+        image: "/game-thumbnails/memory-match-puzzle.png",
+        link: "https://memory-match-puzzle.vercel.app/"
     }
 ]
