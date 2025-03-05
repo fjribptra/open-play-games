@@ -18,7 +18,7 @@ export default function Home() {
           <div className="container mx-auto">
             <div className="bg-black top-0 left-0 w-full h-full opacity-50 absolute"></div>
             <div className="container mx-auto flex flex-col gap-5 items-start">
-              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold z-10">Play Free Games in Seconds</h1>
+              <h1 className="text-4xl sm:text-5xl xl:text-6xl font-bold z-10">Play Free Games in Seconds</h1>
               <p className="z-10 xl:text-2xl">🚀 Play free game in seconds. No login or sign in required just for fun</p>
             </div>
           </div>

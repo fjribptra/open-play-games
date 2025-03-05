@@ -35,5 +35,12 @@ export const mockGames: Game[] = [
         category: "Puzzle",
         image: "/game-thumbnails/memory-match-puzzle.png",
         link: "https://memory-match-puzzle.vercel.app/"
-    }
+    },
+    {
+        id: "6",
+        title: "Math Quiz Chellenge",
+        category: "Education",
+        image: "/game-thumbnails/math-quiz-chellenge.png",
+        link: "https://math-quiz-challenge.vercel.app/"
+    },
 ]
