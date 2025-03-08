@@ -43,4 +43,11 @@ export const mockGames: Game[] = [
         image: "/game-thumbnails/math-quiz-chellenge.png",
         link: "https://math-quiz-challenge.vercel.app/"
     },
+    {
+        id: "7",
+        title: "Forest Adventure",
+        category: "Adventure",
+        image: "/game-thumbnails/forest-adventure.png",
+        link: "https://forest-adventure.vercel.app/"
+    },
 ]
