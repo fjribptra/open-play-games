@@ -50,4 +50,11 @@ export const mockGames: Game[] = [
         image: "/game-thumbnails/forest-adventure.png",
         link: "https://forest-adventure.vercel.app/"
     },
+    {
+        id: "8",
+        title: "Space Shooter 2",
+        category: "Action",
+        image: "/game-thumbnails/space-shooter-2.png",
+        link: "https://space-shooter-2.vercel.app/"
+    },
 ]
