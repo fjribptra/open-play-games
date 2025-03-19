@@ -4,13 +4,14 @@ export interface Game {
     category: string;
     image: string;
     link: string;
+    description: string;
   }
 
 export interface GameCardProps {
     image: string;
     title: string;
     category: string;
-    link: string;
+    id: string
 }
 
 export interface GameFilterProps {
