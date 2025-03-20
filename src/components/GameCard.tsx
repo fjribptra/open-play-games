@@ -7,7 +7,7 @@ import React from 'react'
 
 const GameCard = ({image, title, category, id}: GameCardProps) => {
   return (
-    <Link href={'/game/' + id} className="flex flex-col gap-5 p-5 rounded-md">
+    <Link href={'/game/' + id} className=" flex flex-col gap-5 p-3 rounded-md">
               <div className="w-full aspect-video overflow-hidden rounded-lg ">
               <Image className="w-full h-full cursor-pointer hover:scale-110  transition-all" src={image} width={200} height={200} alt={title}/>
               </div>

@@ -43,10 +43,10 @@ export default async function Page({ params }: {params: Promise<{id: string}>}) 
           alt={filteredGameData.title}
         />
       </div>
-      <div className="container mx-auto grid grid-cols-1 gap-5 xl:grid-cols-3 px-3 py-10 text-white">
+      <div className="container mx-auto grid grid-cols-1 gap-5 xl:grid-cols-3 p-10 text-white">
         <div className="xl:col-span-2 flex flex-col gap-5">
+          <h3 className="text-xl border border-fuchsia-500 px-3 py-2 rounded-lg w-fit text-fuchsia-500">{filteredGameData.category}</h3>
           <h2 className="font-bold text-4xl">{filteredGameData.title}</h2>
-          <h3 className="text-xl">{filteredGameData.category}</h3>
           <p>{filteredGameData.description}</p>
         </div>
         <div className="flex flex-col gap-3">
