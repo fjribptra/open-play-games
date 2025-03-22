@@ -26,8 +26,8 @@ export default function Page() {
               .filter((game) => {
                 return game.category === filterGame || filterGame === "All";
               })
-              .map(({ id, image, title, category }) => (
-                <GameCard image={image} title={title} category={category} id={id} key={id} />
+              .map(({ id, image, title, category, slug }) => (
+                <GameCard image={image} title={title} category={category} slug={slug} key={id} />
               ))}
           </div>
           </div>

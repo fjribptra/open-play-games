@@ -30,7 +30,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="sticky top-50 mx-auto px-0 xl:px-3 py-10 flex flex-col z-50 bg-gradient-to-b from-black to-fuchsia-900">
+        <div className="sticky top-50 mx-auto px-0 xl:px-3 py-10 flex flex-col z-50 bg-gradient-to-b from-fuchsia-900 via-black to-fuchsia-900">
           <div className="container mx-auto">
             {/* Alpha Season 4 */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 py-10">
@@ -52,8 +52,8 @@ export default function Home() {
               .filter((game) => {
                 return game.category === filterGame || filterGame === "All";
               }).slice(0, 4)
-              .map(({ id, image, title, category }) => (
-                <GameCard image={image} title={title} category={category} id={id} key={id} />
+              .map(({ id, image, title, category, slug }) => (
+                <GameCard image={image} title={title} category={category} slug={slug} key={id} />
               ))}
           </div>
          

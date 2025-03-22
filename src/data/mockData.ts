@@ -4,6 +4,7 @@ export const mockGames: Game[] = [
     {
         "id": "1",
         "title": "Catch The Falling Objects",
+        "slug": "catch-the-falling-objects",
         "category": "Arcade",
         "image": "/game-thumbnails/catch-the-fall-objects.png",
         "link": "https://catch-the-falling-objects.vercel.app/",
@@ -12,6 +13,7 @@ export const mockGames: Game[] = [
     {
         "id": "2",
         "title": "Space Shooter Jet",
+        "slug": "space-shooter-jet",
         "category": "Action",
         "image": "/game-thumbnails/space-shooter-jet.png",
         "link": "https://space-shooter-jet.vercel.app/",
@@ -20,6 +22,7 @@ export const mockGames: Game[] = [
     {
         "id": "3",
         "title": "Adventure Island Escape",
+        "slug": "adventure-island-escape",
         "category": "Adventure",
         "image": "/game-thumbnails/adventure-island-escape.png",
         "link": "https://adventure-island-escape.vercel.app/",
@@ -28,6 +31,7 @@ export const mockGames: Game[] = [
     {
         "id": "4",
         "title": "Memory Math",
+        "slug": "memory-math",
         "category": "Education",
         "image": "/game-thumbnails/memory-math.png",
         "link": "https://memory-math.vercel.app/",
@@ -36,6 +40,7 @@ export const mockGames: Game[] = [
     {
         "id": "5",
         "title": "Memory Match Puzzle",
+        "slug": "memory-match-puzzle",
         "category": "Puzzle",
         "image": "/game-thumbnails/memory-match-puzzle.png",
         "link": "https://memory-match-puzzle.vercel.app/",
@@ -44,6 +49,7 @@ export const mockGames: Game[] = [
     {
         "id": "6",
         "title": "Math Quiz Challenge",
+        "slug": "math-quiz-challenge",
         "category": "Education",
         "image": "/game-thumbnails/math-quiz-chellenge.png",
         "link": "https://math-quiz-challenge.vercel.app/",
@@ -52,6 +58,7 @@ export const mockGames: Game[] = [
     {
         "id": "7",
         "title": "Forest Adventure",
+        "slug": "forest-adventure",
         "category": "Adventure",
         "image": "/game-thumbnails/forest-adventure.png",
         "link": "https://forest-adventure.vercel.app/",
@@ -60,6 +67,7 @@ export const mockGames: Game[] = [
     {
         "id": "8",
         "title": "Space Shooter 2",
+        "slug": "space-shooter-2",
         "category": "Action",
         "image": "/game-thumbnails/space-shooter-2.png",
         "link": "https://space-shooter-2.vercel.app/",
@@ -68,6 +76,7 @@ export const mockGames: Game[] = [
     {
         "id": "9",
         "title": "Snake Game",
+        "slug": "snake-game",
         "category": "Arcade",
         "image": "/game-thumbnails/snake-game.png",
         "link": "https://snake-game-white.vercel.app/",

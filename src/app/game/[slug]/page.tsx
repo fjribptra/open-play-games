@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { mockGames } from "@/data/mockData";
 import Link from "next/link";
-import { FaPlay } from "react-icons/fa";
+import { FaPlay, FaStar } from "react-icons/fa";
 
 // Define the params type separately
 // type GamePageParams = {
@@ -13,10 +13,10 @@ import { FaPlay } from "react-icons/fa";
 //   params: GamePageParams;
 // };
 
-export default async function Page({ params }: {params: Promise<{id: string}>}) {
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   // console.log(await params)
-  const  id  = (await params).id;
-  const filteredGameData = mockGames.find((game) => game.id === id);
+  const slug = (await params).slug;
+  const filteredGameData = mockGames.find((game) => game.slug === slug);
 
   // Rest of your component remains the same
   if (!filteredGameData) {
@@ -31,40 +31,24 @@ export default async function Page({ params }: {params: Promise<{id: string}>}) 
     <section className="bg-gradient-to-b from-black to-fuchsia-900">
       <div className="w-screen h-[300px] overflow-hidden bg-black relative">
         <div className="bg-black w-full h-full absolute top-0 bottom-0 left-0 right-0 opacity-50 flex items-center justify-center">
-          <h1 className="font-bold text-5xl z-50 opacity-100 text-white text-center">
-            {filteredGameData?.title}
-          </h1>
+          <h1 className="font-bold text-5xl z-50 opacity-100 text-white text-center p-5">{filteredGameData?.title}</h1>
         </div>
-        <Image
-          className="w-screen"
-          src={filteredGameData.image || "/fallback-image.jpg"}
-          width={500}
-          height={500}
-          alt={filteredGameData.title}
-        />
+        <Image className="w-screen" src={filteredGameData.image || "/fallback-image.jpg"} width={500} height={500} alt={filteredGameData.title} />
       </div>
       <div className="container mx-auto grid grid-cols-1 gap-5 xl:grid-cols-3 p-5 md:p-10 text-white">
         <div className="xl:col-span-2 flex flex-col gap-5">
           <h3 className="text-xl border border-fuchsia-500 px-3 py-2 rounded-lg w-fit text-fuchsia-500">{filteredGameData.category}</h3>
           <h2 className="font-bold text-4xl">{filteredGameData.title}</h2>
           <p>{filteredGameData.description}</p>
+          <Image className="w-full aspect-video rounded-lg" src={filteredGameData.image || "/fallback-image.jpg"} width={500} height={500} alt={filteredGameData.title} />
         </div>
         <div className="flex flex-col gap-3">
-          <Link
-            href={filteredGameData.link || "#"}
-            className="bg-green-500 hover:bg-green-800 transition-all text-white p-3 rounded-md flex gap-3 items-center justify-center cursor-pointer"
-          >
+          <Link href={filteredGameData.link || "#"} className="bg-green-500 hover:bg-green-800 transition-all text-white p-3 rounded-md flex gap-3 items-center justify-center cursor-pointer">
             <FaPlay /> Play
           </Link>
           <div className="bg-black rounded-lg p-3 flex flex-col gap-5">
             <div className="flex gap-3">
-              <Image
-                className="rounded-full w-[50px]"
-                src={"/pajri.jpeg"}
-                alt="@pajribp developer"
-                width={100}
-                height={100}
-              />
+              <Image className="rounded-full w-[50px]" src={"/pajri.jpeg"} alt="@pajribp developer" width={100} height={100} />
               <div className="flex flex-col">
                 <p className="text-white font-semibold">Pajri</p>
                 <Link className="text-blue-500" href="#">
@@ -81,15 +65,39 @@ export default async function Page({ params }: {params: Promise<{id: string}>}) 
                 <p className="font-semibold uppercase">last update</p>
                 <p>Mar 20, 2025</p>
               </div>
+              <div className="flex flex-col">
+                <p className="font-semibold uppercase">platform</p>
+                <p>Web</p>
+              </div>
+              <div className="flex flex-col">
+                <p className="font-semibold uppercase">category</p>
+                <p>{filteredGameData.category}</p>
+              </div>
             </div>
-            <p>View in game</p>
+            <div className="flex flex-col">
+                <p className="font-semibold uppercase">rating</p>
+                <div className="text-yellow-400 flex gap-1">
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                </div>
+              </div>
+            <div className="flex flex-col gap-1">
+                <p className="font-semibold uppercase">comments</p>
+                <div className="bg-slate-900 flex p-5 rounded-lg">
+                  <p>No comments</p>
+                </div>
+              </div>
+            {/* <p>View in game</p>
             <Image
               className="w-full aspect-video rounded-lg"
               src={filteredGameData.image || "/fallback-image.jpg"}
               width={500}
               height={500}
               alt={filteredGameData.title}
-            />
+            /> */}
           </div>
         </div>
       </div>
