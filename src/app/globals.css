@@ -3,3 +3,11 @@
 ::-webkit-scrollbar {
     display: none;
 }
+
+html {
+    cursor: url('/arrowhead-rounded-outline.png') 16 16, auto;
+}
+
+a:hover, img:hover, button:hover {
+    cursor: url('/hand-pointer.png') 16 16, pointer;
+}

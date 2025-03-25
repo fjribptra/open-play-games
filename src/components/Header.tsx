@@ -12,7 +12,8 @@ const Header = () => {
           <h1 className="font-bold text-2xl">Open Play Games</h1>
           </Link>
         </div>
-        <div>
+        <div className="flex gap-3 items-center ">
+            <Link href="/game" className="bg-green-500 text-white px-3 py-2 rounded-lg hover:bg-green-600 hidden xl:block">See all games</Link>
             <Link href="https://instagram.com/openplay.studio" className="text-2xl">
             <FaInstagram />
             </Link>

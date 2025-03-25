@@ -21,14 +21,14 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   // Rest of your component remains the same
   if (!filteredGameData) {
     return (
-      <section className="bg-gradient-to-b from-black to-fuchsia-900 text-white flex items-center justify-center h-screen">
+      <section className="bg-gradient-to-b from-black to-purple-900 text-white flex items-center justify-center h-screen">
         <h1 className="text-3xl font-bold">Game not found</h1>
       </section>
     );
   }
 
   return (
-    <section className="bg-gradient-to-b from-black to-fuchsia-900">
+      <section className="bg-gradient-to-b from-black to-purple-900">
       <div className="w-screen h-[300px] overflow-hidden bg-black relative">
         <div className="bg-black w-full h-full absolute top-0 bottom-0 left-0 right-0 opacity-50 flex items-center justify-center">
           <h1 className="font-bold text-5xl z-50 opacity-100 text-white text-center p-5">{filteredGameData?.title}</h1>
@@ -37,7 +37,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       </div>
       <div className="container mx-auto grid grid-cols-1 gap-5 xl:grid-cols-3 p-5 md:p-10 text-white">
         <div className="xl:col-span-2 flex flex-col gap-5">
-          <h3 className="text-xl border border-fuchsia-500 px-3 py-2 rounded-lg w-fit text-fuchsia-500">{filteredGameData.category}</h3>
+          <h3 className="text-xl border border-purple-500 px-3 py-2 rounded-lg w-fit text-purple-500">{filteredGameData.category}</h3>
           <h2 className="font-bold text-4xl">{filteredGameData.title}</h2>
           <p>{filteredGameData.description}</p>
           <Image className="w-full aspect-video rounded-lg" src={filteredGameData.image || "/fallback-image.jpg"} width={500} height={500} alt={filteredGameData.title} />

@@ -15,7 +15,7 @@ export default function Page() {
 
   const { filterGame, setFilterGame } = context;
     return (
-        <section className="bg-gradient-to-b from-black to-fuchsia-500">
+        <section className="bg-gradient-to-b from-black to-purple-900">
           <div className="container mx-auto flex flex-col gap-10 px-5 py-10 md:px-10">
           <h2 className="text-5xl text-white font-semibold">Discover All Games</h2>
          {/* Category Navigation */}
